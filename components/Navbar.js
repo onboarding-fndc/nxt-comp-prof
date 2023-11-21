@@ -27,12 +27,26 @@ export default function Navbar() {
                         <Link href="/">
                             <div className="text-white hover:bg-white hover:text-black rounded-lg p-2">Home</div>
                         </Link>
+                        <div className="group block relative">
+                        <div >
+                            <div className="text-white hover:bg-white hover:text-black rounded-lg p-2">Service</div>
+                        </div>
+                            <div className="hidden  group-hover:block  grid-row-2 min-w-[115px] space-y-2  top-full absolute z-10 rounded-lg bg-white shadow-lg ">
+                                
+                            <a href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 1</a>
+                            <a href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 2</a>
+                            <a href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 3</a>
+                            <a href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 4</a>
+                            {/* Add more service links as needed */}
+                            </div>
+                        </div>
                         <Link href="/">
                             <div className="text-white hover:bg-white hover:text-black rounded-lg p-2">Contact</div>
                         </Link>
                         <Link href="/about">
                             <div className="text-white hover:bg-white hover:text-black rounded-lg p-2">About Us</div>
                         </Link>
+                        
                 </div>
                 </div>
                 <div className="md:hidden flex items-center">
@@ -88,6 +102,22 @@ export default function Navbar() {
                  <div className="text-white block hover:bg-white hover:text-black rounded-lg p-2">
                     <Link href="/">Contact</Link>
                  </div>
+                 <div className="text-white block hover:bg-white hover:text-black rounded-lg p-2">
+                    <Link href="/service">Service</Link>
+                    </div>
+                    <div className="group block relative">
+                        <div >
+                            <div className="text-white hover:bg-white hover:text-black rounded-lg p-2">Service</div>
+                        </div>
+                            <div className="hidden  group-hover:block  grid-row-2 min-w-[115px] space-y-2  top-full absolute z-10 rounded-lg bg-white shadow-lg ">
+                                
+                            <a href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 1</a>
+                            <a href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 2</a>
+                            <a href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 3</a>
+                            <a href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 4</a>
+                            {/* Add more service links as needed */}
+                            </div>
+                        </div>
                 </div>
             </div>
         )}
