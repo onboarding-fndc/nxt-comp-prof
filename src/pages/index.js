@@ -6,6 +6,7 @@ import Hero from 'components/Hero'
 import About from 'components/About'
 import Contact from 'components/Contact'
 import Price from 'components/Price'
+import Keunggulan from 'components/Keunggulan'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,6 +16,7 @@ export default function Home() {
 
       <Navbar />
       <Hero />
+      <Keunggulan/>
       <div className='border-b border-gray-300 shadow-md p-4 mb-4'>
         <Price/>
       </div>
