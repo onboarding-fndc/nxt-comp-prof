@@ -5,7 +5,7 @@ import 'tailwindcss/tailwind.css';
 const Footer = () => {
   const current_year = new Date().getFullYear();
   return (
-    <footer className='bg-gray-800 p-8 text-white flex-shrink-0'>
+    <footer className='bg-gray-800 p-8 text-white max-w-full'>
       <div className='max-w-7xl mx-auto'>
         <div className='flex flex-wrap justify-between'>
           <div className='text-center md:text-left w-full md:w-1/2 mb-4 md:mb-4'>

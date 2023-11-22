@@ -45,8 +45,10 @@ export default function Navbar() {
                         </Link>
                         <Link href="/about">
                             <div className="text-white hover:bg-white hover:text-black rounded-lg p-2">About Us</div>
-                        </Link>
-                        
+                        </Link>   
+                        <div className="text-white block hover:bg-white hover:text-black  hover:rounded-lg bg-orange-600 rounded-lg p-2">
+                    <Link href="/LoginPage">Login</Link>
+                 </div>                     
                 </div>
                 </div>
                 <div className="md:hidden flex items-center">
@@ -109,7 +111,7 @@ export default function Navbar() {
                         <div >
                             <div className="text-white hover:bg-white hover:text-black rounded-lg p-2">Service</div>
                         </div>
-                            <div className="hidden  group-hover:block  grid-row-2 min-w-[115px] space-y-2  top-full absolute z-10 rounded-lg bg-white shadow-lg ">
+                            <div className="hidden  group-hover:block  grid-row-2 min-w-[115px] space-y-2  top-full absolute  rounded-lg bg-white shadow-lg ">
                                 
                             <a href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 1</a>
                             <a href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 2</a>
@@ -118,6 +120,9 @@ export default function Navbar() {
                             {/* Add more service links as needed */}
                             </div>
                         </div>
+                        <div className="text-white block hover:bg-white hover:text-black rounded-lg p-2">
+                    <Link href="/LoginPage">Login</Link>
+                 </div>
                 </div>
             </div>
         )}
