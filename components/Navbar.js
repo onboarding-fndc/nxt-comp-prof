@@ -33,10 +33,10 @@ export default function Navbar() {
                         </div>
                             <div className="hidden  group-hover:block  grid-row-2 min-w-[115px] space-y-2  top-full absolute z-10 rounded-lg bg-white shadow-lg ">
                                 
-                            <a href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 1</a>
-                            <a href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 2</a>
-                            <a href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 3</a>
-                            <a href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 4</a>
+                            <div href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 1</div>
+                            <div href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 2</div>
+                            <div href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 3</div>
+                            <div href="/service" className="block px-4 py-2 text-white-800 rounded-lg hover:text-white hover:bg-gray-800">Service 4</div>
                             {/* Add more service links as needed */}
                             </div>
                         </div>
