@@ -58,11 +58,19 @@ const LoginPage = () => {
         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
           Login
         </button>
+        <div className='grid grid-cols-2 mx-5'>
         <div className="mt-4 text-gray-700">
           Don&apos;t have an account?{' '}
           <Link href="/register">
-            <div className="text-blue-500">Register here</div>
+            <div className="text-blue-500 hover:text-blue-900">Register here</div>
           </Link>
+        </div>
+        <div className="mt-4 text-gray-700">
+          Forgot your password?{' '}
+          <Link href="/Forgot" className="text-blue-500 hover:text-blue-900">
+            Reset it here
+          </Link>
+        </div>
         </div>
       </form>
     </div>
