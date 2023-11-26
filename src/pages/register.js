@@ -6,15 +6,15 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleEmailChange = (e) => {
+  const HandleEmailChange = (e) => {
     setEmail(e.target.value);
   };
 
-  const handlePasswordChange = (e) => {
+  const HandlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const HandleSubmit = (e) => {
     e.preventDefault();
     // Add your registration logic here (for example, send a request to your backend).
     console.log('Registration submitted:', { email, password });
@@ -25,7 +25,7 @@ const Register = () => {
         <Navbar/>
     <div className="container mx-auto mt-8 mb-10">
       <h2 className="text-3xl font-bold text-center mb-4">Register</h2>
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+      <form onSubmit={HandleSubmit} className="max-w-md mx-auto">
         <div className="mb-4">
           <label htmlFor="email" className="block text-gray-700 font-bold mb-2">
             Email:
@@ -35,7 +35,7 @@ const Register = () => {
             id="email"
             placeholder="Enter your email"
             value={email}
-            onChange={handleEmailChange}
+            onChange={HandleEmailChange}
             className="w-full p-2 border border-gray-400"
             required
           />
@@ -49,7 +49,7 @@ const Register = () => {
             id="password"
             placeholder="Enter your password"
             value={password}
-            onChange={handlePasswordChange}
+            onChange={HandlePasswordChange}
             className="w-full p-2 border border-gray-400"
             required
           />
