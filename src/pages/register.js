@@ -16,7 +16,7 @@ const Register = () => {
 
   const HandleSubmit = (e) => {
     e.preventDefault();
-    // Add your registration logic here (for example, send a request to your backend).
+    
     console.log('Registration submitted:', { email, password });
   };
 

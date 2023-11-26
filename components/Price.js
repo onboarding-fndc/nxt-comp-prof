@@ -25,7 +25,7 @@ const Price = () => {
             <h2 className="text-3xl font-bold text-center mb-8">PILIH KASTAMU</h2>
             <div className="grid grid-cols md:grid-cols-3  gap-8 ">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className="bg-white p-6 rounded shadow-md grid hover:scale-105 border border-2 border-blue-500 hover:border-orange-400">
+                <div key={index} className="bg-white p-6 rounded shadow-md grid hover:scale-105  border-2 border-blue-500 hover:border-orange-400">
                   <h3 className="text-xl font-bold mb-4">{plan.name}</h3>
                   <p className=" font-bold mb-4 lg:text-3xl sm:text-xl text-xl">{plan.price}</p>
                   <ul className="list-disc ml-6">
