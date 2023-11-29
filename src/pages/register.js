@@ -5,6 +5,7 @@ import Navbar from '../../components/Navbar';
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [registrationError, setRegistrationError] = useState(null);
 
   const HandleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -14,10 +15,30 @@ const Register = () => {
     setPassword(e.target.value);
   };
 
-  const HandleSubmit = (e) => {
+  const HandleSubmit = async (e) => {
     e.preventDefault();
-    
-    console.log('Registration submitted:', { email, password });
+    try {
+        const response = await fetch('http://34.126.100.175/user/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        });
+  
+        const data = await response.json();
+  
+        if (response.ok) {
+          console.log('Registration successful:', data.message);
+          // Redirect to a success page or handle registration success
+        } else {
+          console.error('Registration failed:', data.message);
+          setRegistrationError('Registration failed. Please check your data and try again.');
+        }
+      } catch (error) {
+        console.error('Error during registration:', error);
+        setRegistrationError('An error occurred during registration. Please try again.');
+      }
   };
 
   return (
@@ -57,6 +78,7 @@ const Register = () => {
         <button type="submit" className="bg-green-500 text-white px-4 py-2 rounded">
           Register
         </button>
+        {registrationError && <p style={{ color: 'red' }}>{registrationError}</p>}
       </form>
     </div>
     </div>

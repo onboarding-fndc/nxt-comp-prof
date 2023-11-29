@@ -7,6 +7,7 @@ import Link from 'next/link';
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loginError, setLoginError] = useState(null);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -16,10 +17,29 @@ const LoginPage = () => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    try{
+        const response = await fetch ('http://34.126.100.175/user/login',{
+          method: 'POST',
+          headers: {
+            'Content-Type':'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        });
 
-    console.log('Login submitted:', { email, password });
+        const data = await response.json();
+        if (response.ok) {
+          console.log('Login successful:', data.message);
+          // Redirect to dashboard or another page upon successful login
+        } else {
+          console.error('Login failed:', data.message);
+          setLoginError('Invalid email or password. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error during login:', error);
+        setLoginError('An error occurred during login. Please try again.');
+      }
   };
 
   return (
@@ -61,7 +81,7 @@ const LoginPage = () => {
         <div className='grid grid-cols-2 mx-5'>
         <div className="mt-4 text-gray-700">
           Don&apos;t have an account?{' '}
-          <Link href="/register">
+          <Link href="/Register">
             <div className="text-blue-500 hover:text-blue-900">Register here</div>
           </Link>
         </div>
@@ -70,6 +90,7 @@ const LoginPage = () => {
           <Link href="/Forgot" className="text-blue-500 hover:text-blue-900">
             Reset it here
           </Link>
+          {loginError && <p style={{ color: 'red' }}>{loginError}</p>}
         </div>
         </div>
       </form>
